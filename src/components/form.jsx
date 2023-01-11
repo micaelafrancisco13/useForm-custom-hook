@@ -35,7 +35,7 @@ const Form = () => {
       })
       .label("Last name"),
     email: Joi.string()
-      .email({ tlds: { allow: true } })
+      .email({ tlds: { allow: false } })
       .required()
       .label("Email address"),
     password: Joi.string().min(8).max(255).required().label("Password"),
